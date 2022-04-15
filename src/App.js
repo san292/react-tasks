@@ -1,9 +1,11 @@
-import './App.css';
+import Header from './components/Header';
+import Tasks from './components/Tasks';
 
 function App() {
   return (
     <div className="container">
-      <h1>welcome to my react-tasks</h1>
+      <Header />
+      <Tasks />
     </div>
   );
 }
