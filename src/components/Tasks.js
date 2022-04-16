@@ -1,11 +1,11 @@
 import Task from './Task';
 
-const Tasks = ({ tasks }) => {
+const Tasks = ({ tasks, deleteTask }) => {
   console.log('-----', tasks);
   return (
     <div>
       {tasks.map((task) => (
-        <Task task={task} />
+        <Task key={task.id} task={task} deleteTask={deleteTask} />
       ))}
     </div>
   );
