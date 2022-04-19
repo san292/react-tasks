@@ -24,6 +24,7 @@ function App() {
       reminder: true
     }
   ]);
+  const [showAddTask, setShowAddTask] = useState(false);
 
   // function pour supprimer une tachee(task)
   const deleteTask = (id) => {
@@ -41,15 +42,18 @@ function App() {
 
   //function pour ajouter une tache(task)
   const addTask = (task) => {
-    console.log('addtask----->');
     const id = Math.floor(Math.random() * 10000) + 1;
     const newTask = { id, ...task };
     setTasks([...tasks, newTask]);
   };
+  //function pour afficher le formuliare addtask ou le masquer
+  const showAddTaskForm = () => {
+    setShowAddTask(!showAddTask);
+  };
   return (
     <div className="container">
-      <Header />
-      <AddTask onAdd={addTask} />
+      <Header onShowAdd={showAddTaskForm} showAddTask={showAddTask} />
+      {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks
           tasks={tasks}

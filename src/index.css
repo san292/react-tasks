@@ -53,6 +53,9 @@ body {
   display: block;
   width: 100%;
 }
+.btn-add {
+  background: rgb(31, 209, 7);
+}
 
 .task {
   background: #f4f4f4;
