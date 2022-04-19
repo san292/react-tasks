@@ -1,7 +1,7 @@
 import Task from './Task';
 
 const Tasks = ({ tasks, deleteTask, onToggle }) => {
-  console.log('-----', tasks);
+  console.log('tasks from component tasks', tasks);
   return (
     <div>
       {tasks.map((task) => (

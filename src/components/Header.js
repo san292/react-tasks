@@ -6,7 +6,7 @@ const Header = ({ onShowAdd, showAddTask }) => {
     <div className="header">
       <h1>react-tasks</h1>
       <Button
-        color={showAddTask ? 'green' : 'red'}
+        color={showAddTask ? 'red' : 'green'}
         title={showAddTask ? 'Close' : 'Add'}
         onShowAdd={onShowAdd}
       />
