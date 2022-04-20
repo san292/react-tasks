@@ -4,7 +4,7 @@ const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
   const [day, setDay] = useState('');
   const [reminder, setReminder] = useState(false);
-  console.log(text, 'text');
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (!text) {
@@ -16,6 +16,7 @@ const AddTask = ({ onAdd }) => {
     setDay('');
     setReminder(false);
   };
+
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="form-control">
