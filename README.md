@@ -1,4 +1,5 @@
 
+![react-tasks](https://user-images.githubusercontent.com/79156846/164283358-f2664114-940d-47d4-be74-d92685c4e43c.PNG)
 ## React-tasks est un petit projet pour debuter avec React, mais qui traite plusieurs aspect de cette bibliotheque :
 - construire des composants  : decouper l'interface utilisateur en plusieurs parties, code plus visible, reutilisable et facile à maintenir 
 - props : envoyer des propriétés d'un composant à un autre (parent vers enfants en principe) mais l'invers peut se faire selon d'autres methodes exemple: context-Api, Redux
