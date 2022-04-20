@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+
+## React-tasks est un petit projet pour debuter avec React, mais qui traite plusieurs aspect de cette bibliotheque :
+- construire des composants  : decouper l'interface utilisateur en plusieurs parties, code plus visible, reutilisable et facile à maintenir 
+- props : envoyer des propriétés d'un composant à un autre (parent vers enfants en principe) mais l'invers peut se faire selon d'autres methodes exemple: context-Api, Redux
+- state: état initial du composant qui peut evoluer avec le temps ou sur une action de l'utilisateur
+- cycle de vie : useEffect : s'execute aprés le rendu pour éliminer des effets secondaires injustifiés (la mise à jour du DOM, la récupération de données à parti d'une   API...
+- Routes: naviguer d'une page à une autre, personaliser l'affichage selon les besoins de l'pplication
+
+ ##### Pour simuler un back-end sans avoir à le coder, on a utilisé Json-server pour pouvoir réagir avec une Bdd(base de donnée), et puis effectuer nos CRUD(Create,       Read, Update, Delete) en temps réel, ainsi on a pu tester nos methodes comme avec n'imporet quel Api ou Bdd
+ 
+ ##### L'application a été deployé certe sur un server local avec serve, mais s'était juste pour decouvrir la version à deployer et ainsi découvrir la compelation faites au moment du Build, pour servir nos fichiers static 
+ 
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
