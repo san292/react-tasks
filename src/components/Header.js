@@ -6,6 +6,7 @@ const Header = ({ onShowAdd, showAddTask }) => {
   return (
     <div className="header">
       <h1>react-tasks</h1>
+      {/* useLocation sert a cacher le lien une fois qu'on est dans le composant about */}
       {location.pathname === '/' && (
         <Button
           color={showAddTask ? 'red' : 'green'}

@@ -1,22 +1,16 @@
 {
   "tasks": [
     {
-      "text": "zzz",
-      "day": "zzzz",
+      "text": "séance sport avec Laurent ",
+      "day": "18 avril à 10h00",
       "reminder": false,
       "id": 1
     },
     {
-      "text": "tete",
-      "day": "decec",
+      "text": "rdv ophtalmo assia",
+      "day": "20 mars à 9h30",
       "reminder": true,
       "id": 2
-    },
-    {
-      "text": "dd",
-      "day": "dzdzd",
-      "reminder": false,
-      "id": 3
     }
   ]
 }

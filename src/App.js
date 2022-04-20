@@ -17,7 +17,6 @@ function App() {
   const fetchTasks = async () => {
     const res = await fetch('http://localhost:5000/tasks');
     const data = await res.json();
-    console.log('data', data);
     return data;
   };
 
@@ -25,7 +24,6 @@ function App() {
   const fetchTask = async (id) => {
     const res = await fetch(`http://localhost:5000/tasks/${id}`);
     const data = await res.json();
-    console.log('data', data);
     return data;
   };
 
@@ -41,11 +39,13 @@ function App() {
 
   const deleteTask = async (id) => {
     // setTasks(tasks.filter((task) => task.id !== id));
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE'
     });
     // const data = await res.json();
-    setTasks(tasks.filter((task) => task.id !== id));
+    res.status === 200
+      ? setTasks(tasks.filter((task) => task.id !== id))
+      : alert('il ya eu une Erreur lors de la suppression de cette tache');
   };
 
   // ADD TASK (function pour ajouter une tache)
@@ -63,7 +63,6 @@ function App() {
     });
     const data = await res.json();
     setTasks([...tasks, data]);
-    console.log('dataadddddddddddddddddd', data);
   };
 
   //function pour afficher le formuliare addtask ou le masquer
@@ -74,9 +73,8 @@ function App() {
   // function pour faire le rappel de la tache avec le double click
   const toggleReminder = async (id) => {
     const taskToToogle = await fetchTask(id);
-    console.log('taskToToogle', taskToToogle);
+
     const upTask = { ...taskToToogle, reminder: !taskToToogle.reminder };
-    console.log('upTask', upTask);
 
     const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'PUT',

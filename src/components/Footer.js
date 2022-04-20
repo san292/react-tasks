@@ -6,6 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <p>Copyright &copy</p>
+      {/* useLocation sert a cacher le lien une fois qu'onest dans le composant about   */}
       {location.pathname === '/' && <Link to="/about">About</Link>}
     </footer>
   );
